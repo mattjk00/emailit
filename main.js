@@ -3,7 +3,7 @@ let sendButton = document.getElementById("sendButton");
 sendButton.onclick = function() {
     let name = document.getElementById("nameBox").value;
     let loc = document.getElementById("locBox").value;
-    window.location.href = `mailto:police@minneapolismn.gov?
+    window.location.href = `mailto:police@minneapolismn.gov?cc=&
     bcc=minneapolis311@minneapolismn.gov,
     citizeninfo@hennepin.us,
     info@mpdfederation.com
