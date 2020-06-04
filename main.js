@@ -16,8 +16,8 @@ sendButton.onclick = function() {
    ${name}
    `;*/
 
-   window.location.href = `mailto:attorney.general@ag.ky.gov?cc=&
-   bcc=greg.fischer@louisvilleky.gov,
+   window.location.href = `mailto:attorney.general@ag.ky.gov?
+   cc=greg.fischer@louisvilleky.gov,
    robert.schroeder@louisvilleky.gov
    &subject=We Demand Justice for Breonna Taylor
    &body=Hello,
