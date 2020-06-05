@@ -16,19 +16,33 @@ sendButton.onclick = function() {
    ${name}
    `;*/
 
+   let phrase1 = pickFrom(["am emailing today to", ""]);
+   let phrase2 = pickFrom(["insist", "demand"]);
+   let phrase3 = pickFrom(["from", "a resident of"]);
+   let phrase4 = pickFrom(["We Demand", "I Demand", ""]);
+   let phrase5 = pickFrom(["June 5th", "6/5/2020"]);
+   let phrase6 = pickFrom(["March 13th", "3/13/2020"]);
+
+   //console.log(`${phrase1}${phrase2}${phrase3}${phrase4}${phrase5}${phrase6}`);
+
    window.location.href = `mailto:attorney.general@ag.ky.gov?cc=&
    bcc=greg.fischer@louisvilleky.gov,
    robert.schroeder@louisvilleky.gov
-   &subject=We Demand Justice for Breonna Taylor
+   &subject=${phrase4} Justice for Breonna Taylor
    &body=Hello,
 
-   My name is ${name} and I am a resident of ${loc}. I am emailing today to demand accountability in the unjust murder of Breonna Taylor. I demand that Jonathan Mattingly, Brett Hankison and Myles Cosgrove each be arrested and charged for 2nd degree murder for the wrongful death of Breonna Taylor.%0D%0A %0D%0A
+   My name is ${name} and I am ${phrase3} ${loc}. I ${phrase1} demand accountability in the unjust murder of Breonna Taylor. I ${phrase2} that Jonathan Mattingly, Brett Hankison and Myles Cosgrove each be arrested and charged for 2nd degree murder for the wrongful death of Breonna Taylor.%0D%0A %0D%0A
    
-   June 5th would have been Breonna’s 27th birthday but she is unable to celebrate because on March 13th your police recklessly executed a raid using a “no knock” warrant on the wrong home.%0D%0A %0D%0A
+   ${phrase5} would have been Breonna’s 27th birthday but she is unable to celebrate because on ${phrase6} your police recklessly executed a raid using a “no knock” warrant on the wrong home.%0D%0A %0D%0A
    
    Despite your almost 3 months of inaction, Breonna’s life matters and I want justice for her.
    %0D%0A %0D%0A
    Sincerely,%0D%0A
    ${name}
    `;
+}
+
+function pickFrom(a) {
+    let i = Math.floor(Math.random() * a.length);
+    return a[i];
 }
